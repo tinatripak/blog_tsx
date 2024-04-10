@@ -1,0 +1,16 @@
+@import "../../styles/variables.scss";
+
+.heading {
+  font-size: 80px;
+  border-bottom: 1px solid #000;
+  margin: 0;
+  padding: 1rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  @include breakpoint(md) {
+    font-size: 60px;
+  }
+  @include breakpoint(sm) {
+    font-size: 50px;
+  }
+}

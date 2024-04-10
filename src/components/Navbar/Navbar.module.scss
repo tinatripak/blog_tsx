@@ -1,0 +1,134 @@
+@import "../../styles/variables.scss";
+
+.navbar {
+  height: 5rem;
+  position: relative;
+  border-bottom: 1px solid #000;
+
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    @include breakpoint(lg) {
+      justify-content: space-between;
+    }
+    .logo {
+      font-size: 40px;
+      width: 12rem;
+      border-right: 1px solid #000;
+      height: 5rem;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include breakpoint(lg) {
+        border: 0;
+        justify-content: flex-start;
+        width: 100%;
+      }
+      a {
+        color: #000;
+        text-decoration: none;
+      }
+    }
+    .icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include breakpoint(lg) {
+        gap: 2rem;
+      }
+      .menuIcon {
+        display: none;
+        @include breakpoint(lg) {
+          display: block;
+          cursor: pointer;
+        }
+      }
+      .socialMedia {
+        width: 12rem;
+        text-align: center;
+        height: 5rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include breakpoint(lg) {
+          justify-content: flex-end;
+          gap: 10px;
+          width: 100%;
+        }
+      }
+    }
+    .navElements {
+      @include breakpoint(lg) {
+        position: absolute;
+        right: 0;
+        top: calc(5rem + 1px);
+        background-color: #fff;
+        width: 0px;
+        height: calc(100vh - 60px);
+        transition: all 0.3s ease-in;
+        overflow: hidden;
+      }
+      &.active {
+        @include breakpoint(lg) {
+          width: 100%;
+        }
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        @include breakpoint(lg) {
+          display: flex;
+          flex-direction: column;
+        }
+        li {
+          width: 12rem;
+          text-align: center;
+          border-right: 1px solid #000;
+          height: 5rem;
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          @include breakpoint(lg) {
+            margin-top: 22px;
+            border: 0;
+          }
+          a {
+            color: #000;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 20px;
+            &.active {
+              color: #574c4c;
+              position: relative;
+              &::after {
+                content: "";
+                position: absolute;
+                bottom: -4px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #574c4c;
+              }
+            }
+            &:hover {
+              font-style: italic;
+            }
+          }
+        }
+      }
+    }
+  }
+}

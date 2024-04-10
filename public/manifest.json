@@ -1,0 +1,42 @@
+{
+  "short_name": "React App",
+  "name": "Create React App Sample",
+  "icons": [
+    {
+      "src": "logo.png",
+      "type": "image/png"
+    },
+    {
+      "src": "editor.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "funWays.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "loungewearPieces.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "homegoods.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "summer.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "skincare.jpg",
+      "type": "image/jpg"
+    },
+    {
+      "src": "haircare.jpg",
+      "type": "image/jpg"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}

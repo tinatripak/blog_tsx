@@ -1,0 +1,53 @@
+@import "../../styles/variables.scss";
+
+.about {
+  width: 90%;
+  margin: 4rem auto;
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+  border: 1px solid #000;
+
+  @include breakpoint(lg) {
+    display: block;
+  }
+  .photo {
+    img {
+      width: 45vw;
+      height: 100%;
+      object-fit: cover;
+      @include breakpoint(lg) {
+        width: 100%;
+        height: 40rem;
+        object-position: top;
+      }
+      @include breakpoint(sm) {
+        height: 20rem;
+      }
+    }
+  }
+  .biography {
+    padding: 2rem 6rem;
+    @include breakpoint(md) {
+      padding: 2rem 4rem;
+    }
+    @include breakpoint(sm) {
+      padding: 2rem 2rem;
+    }
+    .title {
+      font-size: 50px;
+      width: 80%;
+      @include breakpoint(md) {
+        width: 100%;
+        margin: 35px 0;
+      }
+      @include breakpoint(sm) {
+        margin: 20px 0;
+      }
+    }
+    .text {
+      font-size: 18px;
+      line-height: 2rem;
+    }
+  }
+}
